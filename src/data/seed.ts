@@ -1,7 +1,7 @@
 import type { DealsByStage, Stage, Customer, ActivityItem, FunnelStage } from '@/types';
-import { getHelixData } from '@/data/inMemoryDb';
+import { HELIX_SEED } from '@/data/seedData';
 
-const DATA = getHelixData();
+const DATA = HELIX_SEED;
 
 export const SEED_DEALS: DealsByStage = DATA.SEED_DEALS;
 export const STAGES: Stage[] = DATA.STAGES;

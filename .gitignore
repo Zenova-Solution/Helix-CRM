@@ -30,6 +30,10 @@ dist-ssr
 coverage
 .nyc_output
 
+# Next.js
+.next/
+next-env.d.ts
+
 # Environment
 .env
 .env.local

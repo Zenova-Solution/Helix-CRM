@@ -5,7 +5,7 @@ const resolveDb = (): HelixDb => {
     throw new Error('HELIX_DB is unavailable outside the browser.');
   }
   if (!window.HELIX_DB) {
-    throw new Error('HELIX_DB not found. Ensure data.js loads before main.tsx.');
+    throw new Error('HELIX_DB not found. Ensure data.js loads before the app renders.');
   }
   return window.HELIX_DB;
 };

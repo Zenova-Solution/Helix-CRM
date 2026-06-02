@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Sidebar } from '@/components/Sidebar/Sidebar';
 import { Topbar } from '@/components/Topbar/Topbar';

@@ -2,13 +2,13 @@
 
 ## In-memory DB
 
-Both the prototype (Helix CRM.html) and the Vite app load data from data.js.
+Both the prototype (Helix CRM.html) and the Next.js app load data from data.js.
 That file creates a global in-memory DB at window.HELIX_DB and exposes the
 current data snapshot at window.HELIX_DATA.
 
-### Vite app
+### Next.js app
 
-index.html loads /data.js before /src/main.tsx. Use the helpers below:
+The Next.js layout loads /data.js before the app renders. Use the helpers below:
 
 ```ts
 import { getHelixDb } from '@/data/inMemoryDb';

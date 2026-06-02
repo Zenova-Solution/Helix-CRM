@@ -179,7 +179,7 @@ function Toasts({ toasts }) {
     <div className="toasts">
       {toasts.map(t => (
         <div key={t.id} className="toast">
-          <div className="t-ic"><Icon name="check" size={14} style={{ color: '#fff' }}/></div>
+          <div className="t-ic"><Icon name="check" size={14}/></div>
           <span>{t.text}</span>
         </div>
       ))}
