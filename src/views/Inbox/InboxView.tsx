@@ -120,13 +120,13 @@ export function InboxView() {
                     </div>
                     <div className="msg-body">
                       <p>{active.preview}</p>
-                      <p>A couple of specifics we'd want to nail down before signing off:</p>
+                      <p>A couple of specifics we&apos;d want to nail down before signing off:</p>
                       <ul>
                         <li>Webhook retry behavior on 5xx responses — is there an exponential backoff or fixed interval?</li>
                         <li>Whether the events API supports filtering by metadata at the source.</li>
                         <li>Rough cost expectation at 4× our current volume.</li>
                       </ul>
-                      <p>Happy to set up a 30-minute call this week if it's easier to walk through.</p>
+                      <p>Happy to set up a 30-minute call this week if it&apos;s easier to walk through.</p>
                       <p style={{ color: 'var(--text-dim)' }}>—<br/>{active.from}<br/>{active.co}</p>
                     </div>
                   </div>

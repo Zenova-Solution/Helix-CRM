@@ -16,7 +16,9 @@ export function Pipeline({ deals, stages }: PipelineProps) {
   const onDragStart = (e: React.DragEvent, id: string) => {
     setDragId(id);
     e.dataTransfer.effectAllowed = 'move';
-    try { e.dataTransfer.setData('text/plain', id); } catch (_) {}
+    try { e.dataTransfer.setData('text/plain', id); } catch (_) {
+      // Ignore DataTransfer errors in some browsers.
+    }
   };
   const onDragEnd = () => { setDragId(null); setDragOverCol(null); };
   const onDragOver = (e: React.DragEvent, col: string) => { e.preventDefault(); setDragOverCol(col); };

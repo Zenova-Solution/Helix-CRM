@@ -112,7 +112,7 @@ export function DashboardView({ push: _push, deals, showAI }: DashboardViewProps
       <div className="page-head">
         <div>
           <h1>Good morning, Mira</h1>
-          <div className="sub">Here's what's happening across your pipeline today.</div>
+          <div className="sub">Here&apos;s what&apos;s happening across your pipeline today.</div>
         </div>
         <div className="right">
           <div className="seg">

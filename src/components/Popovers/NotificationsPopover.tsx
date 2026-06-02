@@ -57,7 +57,7 @@ export function NotificationsPopover({ open, onClose }: NotificationsPopoverProp
           </div>
         ))}
         {filtered.length === 0 && (
-          <div style={{ padding: 30, textAlign: 'center', color: 'var(--text-muted)', fontSize: 13 }}>You're all caught up.</div>
+          <div style={{ padding: 30, textAlign: 'center', color: 'var(--text-muted)', fontSize: 13 }}>You&apos;re all caught up.</div>
         )}
       </div>
       <div className="popover-foot">

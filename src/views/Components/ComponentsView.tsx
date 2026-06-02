@@ -278,7 +278,7 @@ export function ComponentsView() {
               </div>
               <div className="banner banner-warn">
                 <Icon name="flame" size={14}/>
-                <span>3 high-value accounts haven't been contacted in 14+ days.</span>
+                <span>3 high-value accounts haven&apos;t been contacted in 14+ days.</span>
               </div>
             </div>
             <div className="cmp-row" style={{ flexDirection: 'column', alignItems: 'stretch' }}>
@@ -320,7 +320,7 @@ export function ComponentsView() {
                   <Icon name="inbox" size={20} style={{ color: 'var(--text-dim)' }}/>
                 </div>
                 <div style={{ fontSize: 15, fontWeight: 600 }}>No messages yet</div>
-                <div style={{ fontSize: 12.5, color: 'var(--text-dim)', marginTop: 4, maxWidth: 320 }}>When a contact emails you back, it'll show up here.</div>
+                <div style={{ fontSize: 12.5, color: 'var(--text-dim)', marginTop: 4, maxWidth: 320 }}>When a contact emails you back, it&apos;ll show up here.</div>
                 <button className="btn btn-primary" style={{ marginTop: 14 }}>Compose first message</button>
               </div>
             </div>

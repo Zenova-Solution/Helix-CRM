@@ -110,7 +110,7 @@ export function NewAutomationModal({ open, onClose, onCreate }: NewAutomationMod
       {step === 2 && (
         <>
           <div style={{ fontSize: 12, color: 'var(--text-dim)', marginBottom: 10 }}>
-            Click actions to add them to the workflow. They'll run in order.
+            Click actions to add them to the workflow. They&apos;ll run in order.
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 8, marginBottom: 18 }}>
             {ACTIONS.map(a => (

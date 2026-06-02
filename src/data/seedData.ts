@@ -1,6 +1,6 @@
 import type { HelixData } from '@/types';
 
-const makeRandom = (seed: number) => () => {
+const makeRandom = (seed: number) => {
   let next = seed >>> 0;
   return () => {
     next = (next * 1664525 + 1013904223) >>> 0;

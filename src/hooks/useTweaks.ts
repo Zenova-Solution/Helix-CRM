@@ -1,12 +1,17 @@
 import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import type { TweakValues } from '@/types';
 
-export function useTweaks(defaults: TweakValues): [TweakValues, (keyOrEdits: string | Partial<TweakValues>, val?: any) => void] {
+type TweakKey = keyof TweakValues;
+type TweakValue = TweakValues[TweakKey];
+type TweakEdits = Partial<TweakValues>;
+type DeckStageElement = HTMLElement & { _railEnabled?: boolean };
+
+export function useTweaks(defaults: TweakValues): [TweakValues, (keyOrEdits: TweakKey | TweakEdits, val?: TweakValue) => void] {
   const [values, setValues] = useState(defaults);
 
-  const setTweak = useCallback((keyOrEdits: string | Partial<TweakValues>, val?: any) => {
-    const edits = typeof keyOrEdits === 'object' && keyOrEdits !== null
-      ? keyOrEdits : { [keyOrEdits]: val };
+  const setTweak = useCallback((keyOrEdits: TweakKey | TweakEdits, val?: TweakValue) => {
+    const edits: TweakEdits = typeof keyOrEdits === 'object' && keyOrEdits !== null
+      ? keyOrEdits : ({ [keyOrEdits]: val } as TweakEdits);
     setValues((prev) => ({ ...prev, ...edits }));
     window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*');
     window.dispatchEvent(new CustomEvent('tweakchange', { detail: edits }));
@@ -25,7 +30,7 @@ export function useTweaksPanel(_defaults: TweakValues) {
   );
 
   const [railEnabled, setRailEnabled] = useState(
-    () => hasDeckStage && !!(document.querySelector('deck-stage') as any)?._railEnabled,
+    () => hasDeckStage && !!(document.querySelector('deck-stage') as DeckStageElement | null)?._railEnabled,
   );
 
   useEffect(() => {
