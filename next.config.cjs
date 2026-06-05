@@ -1,6 +1,4 @@
-const isProd = process.env.NODE_ENV === 'production';
-const isGithubPages = process.env.GITHUB_PAGES === 'true';
-const basePath = isGithubPages ? '/Helix-CRM' : '';
+const basePath = process.env.NEXT_BASE_PATH || '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
