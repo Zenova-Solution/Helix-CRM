@@ -1,4 +1,5 @@
-const basePath = process.env.NEXT_BASE_PATH || '';
+const isGithubPages = process.env.GITHUB_PAGES === 'true';
+const basePath = isGithubPages ? (process.env.NEXT_BASE_PATH || '') : '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
