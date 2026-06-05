@@ -1,5 +1,6 @@
 const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/Helix-CRM' : '';
+const isGithubPages = process.env.GITHUB_PAGES === 'true';
+const basePath = isGithubPages ? '/Helix-CRM' : '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,9 +9,6 @@ const nextConfig = {
   trailingSlash: true,
   basePath,
   assetPrefix: basePath || undefined,
-  env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
-  },
   images: { unoptimized: true },
 };
 
