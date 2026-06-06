@@ -8,7 +8,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <script src={`${basePath}/data.js`} />
+        <script src={`${basePath}/data.js`}></script>
         {children}
       </body>
     </html>
