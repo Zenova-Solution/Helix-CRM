@@ -1,13 +1,10 @@
-const isGithubPages = process.env.GITHUB_PAGES === 'true';
-const basePath = isGithubPages ? (process.env.NEXT_PUBLIC_BASE_PATH || '') : '';
+const isGithub = process.env.GITHUB_PAGES === 'true';
+const bp = isGithub ? (process.env.NEXT_PUBLIC_BASE_PATH || '') : '';
 
-const nextConfig = {
+export default {
   output: 'export',
-  reactStrictMode: true,
   trailingSlash: true,
-  basePath,
-  assetPrefix: basePath || undefined,
+  basePath: bp,
+  assetPrefix: bp || undefined,
   images: { unoptimized: true },
 };
-
-export default nextConfig;
